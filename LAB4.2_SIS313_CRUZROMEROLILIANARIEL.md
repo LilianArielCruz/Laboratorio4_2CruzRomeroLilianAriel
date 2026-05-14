@@ -14,11 +14,11 @@
 
 La infraestructura se compone de tres entidades lógicas:
 1. **Host Anfitrión (Windows):** Accede mediante `127.0.0.1:8080`.
-2. **Servidor DNS/Gateway (Ubuntu/Debian):**[cite: 1]
-   - Adaptador 1 (NAT): `10.0.2.15`.[cite: 1]
-   - Adaptador 2 (Red Interna): `192.168.10.2`.[cite: 1]
-3. **Servidor Web (Linux):**[cite: 1]
-   - Adaptador 1 (Red Interna): `192.168.10.3`.[cite: 1]
+2. **Servidor DNS/Gateway (Ubuntu/Debian):**
+   - Adaptador 1 (NAT): `10.0.2.15`.
+   - Adaptador 2 (Red Interna): `192.168.10.2`.
+3. **Servidor Web (Linux):**
+   - Adaptador 1 (Red Interna): `192.168.10.3`.
 
 ## Esquema de la Topología y Flujo de Datos
 La arquitectura implementada sigue un modelo de red segmentada donde el servidor DNS actúa como intermediario (Gateway) entre la red externa del anfitrión y la red privada de los servidores.
@@ -76,54 +76,57 @@ sudo iptables -A FORWARD -p tcp --dport 80 -d 192.168.10.3 -j ACCEPT
    
 ## Configuraciones del DNS:
 
-   ![DNSconf]()![Imagenes/4.png]
+   ![DNSconf](Imagenes/4.png)
    
-   ![DNSconfiguracion]()![Imagenes/5.png]
+   ![DNSconfiguracion](Imagenes/5.png)
 
    
 ## Prubras Grupales e individuales
 
 
-   ![Puerto escuchando]()![Imagenes/1.png]
+   ![Puerto escuchando](Imagenes/1.png)
 
    
 ## PRUEBAS INDIVIDUALES: 
-   ![Comando_dig]()![Imagenes/7.png]
-   ![Comando_nslookup]()![Imagenes/2.png]
+   ![Comando_dig](Imagenes/7.png)
+
+
+   
+   ![Comando_nslookup](Imagenes/2.png)
 
 ## Se muestra la pagina web en Linux
 
-   ![Comando_curl]()![Imagenes/8.]
+   ![Comando_curl](Imagenes/8.png)
 
    
 ## Se muestra la pagina web en el Anfitrion
 
-   ![Paginaweb]()![Imagenes/9.png]
+   ![Paginaweb]()(Imagenes/9.png)
 
    
 ## PRUEBAS GRUPALES
    ## Configuracion DNS
 
    
-   ![confidns]()![Imagenes/10.jpg]
+   ![confidns](Imagenes/10.jpg)
    
    
    ## Conectividad entre maquinas
    
    
-   ![ping]()![Imagenes/11.jpeg]
+   ![ping](Imagenes/11.jpg)
    
    
    ## Conectividad con la pagina y linux
    
    
-   ![confidns]()![Imagenes/12.jpeg]
+   ![confidns](Imagenes/12.jpg)
    
    
    ## Conectividad con la pagina y la PC Anfitrion
    
    
-   ![confidns]()![Imagenes/13.jpeg]
+   ![confidns](Imagenes/12.jpg)
 
 
 6. ## Conclusiones 
