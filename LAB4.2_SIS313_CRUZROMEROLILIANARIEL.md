@@ -71,29 +71,29 @@ sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 sudo iptables -A FORWARD -p tcp --dport 80 -d 192.168.10.3 -j ACCEPT
 ```
 5. ## Configuracion del Cliente
-##Configuracion forward
+Configuracion forward
    ![Configuraciones](Imagenes/3.jpeg)
-## Configuraciones del DNS:
+ Configuraciones del DNS:
    ![DNSconf]()![Imagenes/4.jpeg]
    ![DNSconfiguracion]()![Imagenes/5.jpeg]
-## Prubras Grupales e individuales
+# Prubras Grupales e individuales
    ![Puerto escuchando]()![Imagenes/1.jpeg]
-## PRUEBAS INDIVIDUALES: 
+ PRUEBAS INDIVIDUALES: 
    ![Comando_dig]()![Imagenes/7.jpeg]
    ![Comando_nslookup]()![Imagenes/2.jpeg]
 
-## Se muestra la pagina web en Linux
+ Se muestra la pagina web en Linux
    ![Comando_curl]()![Imagenes/8.jpeg]
-## Se muestra la pagina web en el Anfitrion
+ Se muestra la pagina web en el Anfitrion
    ![Paginaweb]()![Imagenes/9.jpeg]
-## PRUEBAS GRUPALES
-   ## Configuracion DNS
+ # PRUEBAS GRUPALES
+    Configuracion DNS
    ![confidns]()![Imagenes/10.jpeg]
-   ## Conectividad entre maquinas
+    Conectividad entre maquinas
    ![ping]()![Imagenes/11.jpeg]
-   ## Conectividad con la pagina y linux
+    Conectividad con la pagina y linux
    ![confidns]()![Imagenes/12.jpeg]
-   ## Conectividad con la pagina y la PC Anfitrion
+    Conectividad con la pagina y la PC Anfitrion
    ![confidns]()![Imagenes/13.jpeg]
 6. ## Conclusiones 
 * **Sincronización de Servicios Multivm:** El éxito de la práctica radicó en la capacidad del grupo para coordinar tres máquinas virtuales con roles distintos, logrando que el Servidor DNS actuara como el núcleo de comunicación (Gateway) para la Red Interna privada.
