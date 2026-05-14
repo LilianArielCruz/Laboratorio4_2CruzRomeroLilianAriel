@@ -73,28 +73,59 @@ sudo iptables -A FORWARD -p tcp --dport 80 -d 192.168.10.3 -j ACCEPT
 5. ## Configuracion del Cliente
 ##Configuracion forward
    ![Configuraciones](Imagenes/3.png)
+   
 ## Configuraciones del DNS:
-   ![DNSconf]()![Imagenes/4.jpeg]
+
+   ![DNSconf]()![Imagenes/4.png]
+   
    ![DNSconfiguracion]()![Imagenes/5.png]
+
+   
 ## Prubras Grupales e individuales
+
+
    ![Puerto escuchando]()![Imagenes/1.png]
+
+   
 ## PRUEBAS INDIVIDUALES: 
    ![Comando_dig]()![Imagenes/7.png]
    ![Comando_nslookup]()![Imagenes/2.png]
 
 ## Se muestra la pagina web en Linux
+
    ![Comando_curl]()![Imagenes/8.]
+
+   
 ## Se muestra la pagina web en el Anfitrion
+
    ![Paginaweb]()![Imagenes/9.png]
+
+   
 ## PRUEBAS GRUPALES
    ## Configuracion DNS
+
+   
    ![confidns]()![Imagenes/10.jpg]
+   
+   
    ## Conectividad entre maquinas
+   
+   
    ![ping]()![Imagenes/11.jpeg]
+   
+   
    ## Conectividad con la pagina y linux
+   
+   
    ![confidns]()![Imagenes/12.jpeg]
+   
+   
    ## Conectividad con la pagina y la PC Anfitrion
+   
+   
    ![confidns]()![Imagenes/13.jpeg]
+
+
 6. ## Conclusiones 
 * **Sincronización de Servicios Multivm:** El éxito de la práctica radicó en la capacidad del grupo para coordinar tres máquinas virtuales con roles distintos, logrando que el Servidor DNS actuara como el núcleo de comunicación (Gateway) para la Red Interna privada.
 * **Validación del Enrutamiento Dinámico:** Se comprobó que la activación del `ip_forward` en el kernel de Linux es un paso crítico; sin esta configuración, aunque el DNS responda, el tráfico de datos hacia el servidor web se interrumpe en la capa de red.
