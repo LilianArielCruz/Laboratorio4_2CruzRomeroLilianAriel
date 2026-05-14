@@ -108,19 +108,19 @@ sudo iptables -A FORWARD -p tcp --dport 80 -d 192.168.10.3 -j ACCEPT
    ## Configuracion DNS
 
    
-   ![confidns](Imagenes/10.jpg)
+   ![confidns](Imagenes/10.jpeg)
    
    
    ## Conectividad entre maquinas
    
    
-   ![ping](Imagenes/11.jpg)
+   ![ping](Imagenes/11.jpge)
    
    
    ## Conectividad con la pagina y linux
    
    
-   ![confidns](Imagenes/12.jpg)
+   ![confidns](Imagenes/12.jpge)
    
    
    ## Conectividad con la pagina y la PC Anfitrion
