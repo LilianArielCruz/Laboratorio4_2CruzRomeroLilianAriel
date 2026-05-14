@@ -56,22 +56,24 @@ Se habilitó el reenvío de IPv4 editando el archivo `/etc/sysctl.conf` para per
 ```bash
 # Comando para activar el forwarding inmediatamente
 sudo sysctl -w net.ipv4.ip_forward=1
-
+```
 ## Reglas IPTables (NAT)
 # Redirigir el tráfico que llega al DNS (puerto 80) hacia la VM Web
+```
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination 192.168.10.3:80
-
+```
 # Enmascarar la salida para que la VM Web pueda responder al Host
+```
 sudo iptables -t nat -A POSTROUTING -j MASQUERADE
-
+```
 # Permitir el tráfico de reenvío explícitamente
+```
 sudo iptables -A FORWARD -p tcp --dport 80 -d 192.168.10.3 -j ACCEPT
-
+```
 5. ## Configuracion del Cliente
 ##Configuracion forward
    ![Configuraciones](Imagenes/3.jpeg)
 ## Configuraciones del DNS:
-
    ![DNSconf]()![Imagenes/4.jpeg]
    ![DNSconfiguracion]()![Imagenes/5.jpeg]
 ## Prubras Grupales e individuales
@@ -94,9 +96,9 @@ sudo iptables -A FORWARD -p tcp --dport 80 -d 192.168.10.3 -j ACCEPT
    ## Conectividad con la pagina y la PC Anfitrion
    ![confidns]()![Imagenes/13.jpeg]
 6. ## Conclusiones 
-* **Sincronización de Servicios Multivm:** El éxito de la práctica radicó en la capacidad del grupo para coordinar tres máquinas virtuales con roles distintos, logrando que el Servidor DNS actuara como el núcleo de comunicación (Gateway) para la Red Interna privada[cite: 1].
-* **Validación del Enrutamiento Dinámico:** Se comprobó que la activación del `ip_forward` en el kernel de Linux es un paso crítico; sin esta configuración, aunque el DNS responda, el tráfico de datos hacia el servidor web se interrumpe en la capa de red[cite: 1].
-* **Eficiencia del NAT e IPTables:** La implementación de reglas de traslación de direcciones (NAT) mediante IPTables permitió resolver la limitación física del Host anfitrión, demostrando cómo se puede mapear un puerto externo (8080) hacia un recurso interno (192.168.10.3) de forma transparente para el usuario final[cite: 1].
-* **Resolución de Nombres Distribuida:** El grupo validó que la edición del archivo `hosts` en el sistema anfitrión es una técnica fundamental de diagnóstico que permite simular la resolución de nombres antes de desplegar un servicio en una red de producción real[cite: 1].
-* **Aprendizaje Colaborativo:** Durante la sesión, el equipo identificó y resolvió errores comunes como la falta de herramientas de red (`netstat`) y conflictos en el reenvío de puertos de VirtualBox, fortaleciendo las habilidades de troubleshooting y administración de servidores Linux en entornos virtuales[cite: 1].
-* **Integración Final:** Se logró el objetivo principal de la práctica: integrar exitosamente los servicios de DNS y Web en una arquitectura segmentada, cumpliendo rigurosamente con los requisitos técnicos exigidos por la facultad[cite: 1].
+* **Sincronización de Servicios Multivm:** El éxito de la práctica radicó en la capacidad del grupo para coordinar tres máquinas virtuales con roles distintos, logrando que el Servidor DNS actuara como el núcleo de comunicación (Gateway) para la Red Interna privada.
+* **Validación del Enrutamiento Dinámico:** Se comprobó que la activación del `ip_forward` en el kernel de Linux es un paso crítico; sin esta configuración, aunque el DNS responda, el tráfico de datos hacia el servidor web se interrumpe en la capa de red.
+* **Eficiencia del NAT e IPTables:** La implementación de reglas de traslación de direcciones (NAT) mediante IPTables permitió resolver la limitación física del Host anfitrión, demostrando cómo se puede mapear un puerto externo (8080) hacia un recurso interno (192.168.10.3) de forma transparente para el usuario final.
+* **Resolución de Nombres Distribuida:** El grupo validó que la edición del archivo `hosts` en el sistema anfitrión es una técnica fundamental de diagnóstico que permite simular la resolución de nombres antes de desplegar un servicio en una red de producción real.
+* **Aprendizaje Colaborativo:** Durante la sesión, el equipo identificó y resolvió errores comunes como la falta de herramientas de red (`netstat`) y conflictos en el reenvío de puertos de VirtualBox, fortaleciendo las habilidades de troubleshooting y administración de servidores Linux en entornos virtuales.
+* **Integración Final:** Se logró el objetivo principal de la práctica: integrar exitosamente los servicios de DNS y Web en una arquitectura segmentada, cumpliendo rigurosamente con los requisitos técnicos exigidos por la facultad.
