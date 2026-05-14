@@ -101,7 +101,7 @@ sudo iptables -A FORWARD -p tcp --dport 80 -d 192.168.10.3 -j ACCEPT
    
 ## Se muestra la pagina web en el Anfitrion
 
-   ![Paginaweb]()(Imagenes/9.png)
+   ![Paginaweb](Imagenes/9.png)
 
    
 ## PRUEBAS GRUPALES
