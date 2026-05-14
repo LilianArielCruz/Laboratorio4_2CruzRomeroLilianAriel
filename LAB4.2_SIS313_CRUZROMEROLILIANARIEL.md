@@ -114,19 +114,19 @@ sudo iptables -A FORWARD -p tcp --dport 80 -d 192.168.10.3 -j ACCEPT
    ## Conectividad entre maquinas
    
    
-   ![ping](Imagenes/11.jpge)
+   ![ping](Imagenes/11.jpeg)
    
    
    ## Conectividad con la pagina y linux
    
    
-   ![confidns](Imagenes/12.jpge)
+   ![confidns](Imagenes/12.jpeg)
    
    
    ## Conectividad con la pagina y la PC Anfitrion
    
    
-   ![confidns](Imagenes/12.jpg)
+   ![confidns](Imagenes/13.jpeg)
 
 
 6. ## Conclusiones 
